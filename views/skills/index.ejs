@@ -1,0 +1,16 @@
+<%- include('../partials/header') %> 
+
+<h1>Skills</h1>
+<ul>
+    <% skill.forEach(function(s) { %>
+    <li>
+        <a href="/skill/<%= s.id %>">
+          <%= s.project %>
+        </a>  
+         -
+        <%= s.deployed ? 'deployed' : 'in progress' %>
+    </li>
+   <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

@@ -6,12 +6,12 @@ module.exports = {
 };
 
 function show(req, res) {
-    const skill = Skill.getOne(req.params.id);
+    const skill = Skill.getOne(req.params.technology);
     res.render('skills/show', {skill});
 }
 
 function index(req, res) {
     res.render('skills/index', {
-        skill: Skill.getAll()
+        skills: Skill.getAll()
     });
 }

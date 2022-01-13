@@ -1,14 +1,12 @@
 <%- include('../partials/header') %> 
 
-<h1>Skills</h1>
+<h1>My Skills</h1>
 <ul>
-    <% skill.forEach(function(s) { %>
+    <% skills.forEach(s => { %>
     <li>
-        <a href="/skill/<%= s.id %>">
-          <%= s.project %>
-        </a>  
-         -
-        <%= s.deployed ? 'deployed' : 'in progress' %>
+      <a href="/skills/<%= s.technology %>">
+        <%= s.technology %> 
+      </a>    
     </li>
    <% }); %>
 </ul>

@@ -1,6 +1,12 @@
 <%- include('../partials/header') %>
 
-<h1>Project #<%= skills.id %></h1>
-<h3><%= skills.project %></h3>
+<h1><%= skill.technology %></h1>
+<h3>Type: <%= skill.type %></h3>
+<h3>Experience:</h3>
+<ul>
+    <% for (let concept of skill.concepts) { %>
+    <li><%= concept %></li>
+    <% }; %>
+</ul>
 
 <%- include('../partials/footer') %>

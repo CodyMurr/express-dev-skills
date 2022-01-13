@@ -19,9 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-var skillsRouter = require('./routes/skills');
-
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
 

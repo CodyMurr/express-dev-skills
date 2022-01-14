@@ -1,14 +1,20 @@
 <%- include('../partials/header') %> 
 
-<h1>My Skills</h1>
+<h2>My Skills as of <%= time %></h2>
 <ul>
-    <% skills.forEach(s => { %>
+  <% skills.forEach(function(s) { %>
     <li>
-      <a href="/skills/<%= s.technology %>">
-        <%= s.technology %> 
-      </a>    
+      <form action="/skills/<%= s.id %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">X</button>
+      </form>
+      <a href="/skills/<%= s.id %>">
+        <strong><%= s.technology %> </strong>
+      </a>
+      -
+      <em><%= s.type %></em>
     </li>
-   <% }); %>
+  <% }); %>
 </ul>
+
 
 <%- include('../partials/footer') %>

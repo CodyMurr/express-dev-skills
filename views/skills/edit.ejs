@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Skill</h1>
+<!-- The action attribute is the path of the request when the form is submitted -->
+<form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <label for="technology">Skill:  </label>
+    <input type="text" name="technology" value="<%= skill.technology %>">
+    &nbsp;
+    <label for="type">Type: </label>
+    <input type="text" name="type" value="<%= skill.type %>">
+    &nbsp;
+    <label for="concepts">Experience: </label>
+    <input type="text" name="concepts" value="<%= skill.concepts %>">
+    <br>
+    <br>
+    <button type="submit">Add Skill</button>
+</form>
+
+<%- include('../partials/footer') %>

@@ -1,14 +1,41 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #35A0B1;
+}
+
 body {
+  width: 50%;
+  border: 3px solid #0C2231;
+  border-radius: 1em;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #F4A15D;
+  background-color: #0C2231;
+}
+
+nav {
+  text-align: center;
 }
 
 a {
-  color: #00B7FF;
+  color: #35A0B1;
 }
 
 li {
   margin: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
 }
 
 .delete-form {
@@ -18,4 +45,11 @@ li {
 
 .delete-form button {
   color: red;
+}
+
+#title {
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  font-size: 4em;
 }

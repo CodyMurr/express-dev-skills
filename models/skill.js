@@ -1,7 +1,7 @@
 let skills = [
-    {id: 561, technology: 'HTML', type: 'Document/Markup', concepts: ['Semantics', 'Elements/Tags', 'Forms', 'Tables']},
-    {id: 860, technology: 'CSS', type: 'Stylesheet', concepts: ['Responsive Design', 'Flexbox', 'Grid', 'Animations', 'Specificity']},
-    {id: 730, technology: 'Javascript', type: 'Object Oriented Programming', concepts: ['DOM Manipulation', 'Dynamic Webpage Rendering']},
+    {id: 561, technology: 'HTML', type: 'Document/Markup'},
+    {id: 860, technology: 'CSS', type: 'Stylesheet'},
+    {id: 730, technology: 'Javascript', type: 'Object Oriented Programming'},
 ];
 
 module.exports = {
@@ -23,9 +23,10 @@ function deleteOne(id) {
     skills = skills.filter(skill => skill.id !== id);
 }
 
-function create(skill) {
+function create(skill, concept) {
     skill.id = Date.now() % 1000;
     skills.push(skill);
+    skills.concepts.push(concept);
 }
 
 function getOne(id) {
